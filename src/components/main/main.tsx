@@ -17,7 +17,7 @@ const LazyBackgroundImage = ({
 }) => {
   return (
     <div
-      className="w-full h-[80vh] md:h-[90vh] bg-center bg-cover object-cover bg-no-repeat flex justify-center items-center text-white text-5xl"
+      className="w-full h-[80vh] md:h-[90vh] bg-center bg-cover object-cover bg-no-repeat flex justify-center items-center text-white text-2xl lg:text-5xl"
       style={{ backgroundImage: `url("/${src}")` }}
     >
       <div
