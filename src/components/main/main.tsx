@@ -1,62 +1,63 @@
-import { useMemo } from "react";
+import { Suspense, useMemo } from "react";
 import { useTranslation } from "react-i18next";
-//@ts-ignore
+// @ts-ignore
 import "swiper/css";
-//@ts-ignore
+// @ts-ignore
 import "swiper/css/navigation";
-//@ts-ignore
-import "swiper/css/pagination";
-//@ts-ignore
-import "swiper/css/scrollbar";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+
+// Lazy load uchun komponent
+const LazyBackgroundImage = ({
+  src,
+  title,
+}: {
+  src: string;
+  title: string;
+}) => {
+  return (
+    <div
+      className="w-full h-[80vh] md:h-[90vh] bg-center bg-cover object-cover bg-no-repeat flex justify-center items-center text-white text-5xl"
+      style={{ backgroundImage: `url("/${src}")` }}
+    >
+      <div
+        className="flex justify-center rounded-3xl items-center w-[80%] md:w-[700px] h-[300px]"
+        style={{ backdropFilter: "blur(20px)" }}
+      >
+        <h2 className="text-center font-bold">{title}</h2>
+      </div>
+    </div>
+  );
+};
 
 const Main = () => {
   const { t } = useTranslation();
   const bgImages = useMemo(
     () => [
       { img: "elevator-bg1.png", title: t("title1") },
-      {
-        img: "elevator-bg2.png",
-        title: t("title2"),
-      },
-      {
-        img: "elevator-bg3.png",
-        title: t("title3"),
-      },
+      { img: "elevator-bg2.png", title: t("title2") },
+      { img: "elevator-bg3.png", title: t("title3") },
     ],
     [t]
   );
+
   return (
     <div id="main" className="w-full h-[80vh] md:h-[90vh]">
       <Swiper
         spaceBetween={0}
-        centeredSlides={true}
         autoplay={{
           delay: 3500,
-          disableOnInteraction: false,
-        }}
-        pagination={{
-          clickable: true,
         }}
         navigation={true}
-        modules={[Autoplay, Pagination, Navigation]}
+        modules={[Autoplay, Navigation]}
         loop={true}
         className="w-full h-full"
       >
-        {bgImages.map((image: Record<string, any>, index) => (
+        {bgImages.map((image, index) => (
           <SwiperSlide key={index}>
-            <div
-              className="w-full h-[80vh] md:h-[90vh] bg-center bg-cover object-cover bg-no-repeat flex justify-center items-center text-white text-5xl"
-              style={{ backgroundImage: `url("/${image.img}")` }}
-            >
-              <div
-                className="flex justify-center rounded-3xl items-center w-[80%] md:w-[700px] h-[300px]"
-                style={{ backdropFilter: "blur(20px)" }}
-              >
-                <h2 className="text-center font-bold">{image.title}</h2>
-              </div>
-            </div>
+            <Suspense fallback={<div>Loading...</div>}>
+              <LazyBackgroundImage src={image.img} title={image.title} />
+            </Suspense>
           </SwiperSlide>
         ))}
       </Swiper>
