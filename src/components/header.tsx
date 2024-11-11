@@ -1,6 +1,7 @@
 import { Button, Drawer, Segmented, Space } from "antd";
 import { useState } from "react";
 import { FiMenu, FiPhoneCall } from "react-icons/fi";
+import { Link as RouterLink } from "react-router-dom";
 import { Link } from "react-scroll";
 import useCompanyMenus from "../hooks/use-company-menus";
 import i18n from "../i18n/i18n";
@@ -28,7 +29,7 @@ const Header = () => {
         to={"main"}
         smooth={true}
         duration={800}
-        className="text-2xl font-bold"
+        className="text-2xl font-bold cursor-pointer"
       >
         Toshiba & Hitachi
       </Link>
@@ -39,7 +40,7 @@ const Header = () => {
             smooth={true}
             to={menu.path}
             duration={500}
-            className="uppercase text-lg"
+            className="uppercase text-lg cursor-pointer"
           >
             {menu.title}
           </Link>
@@ -54,10 +55,12 @@ const Header = () => {
         >
           {buttonText}
         </Button>
-        <div className="flex justify-center items-center text-xl gap-2">
-          <FiPhoneCall />
-          +998 (99) 172 17 62
-        </div>
+        <RouterLink to={"tel:+998991721762"}>
+          <div className="flex justify-center items-center text-xl gap-2">
+            <FiPhoneCall />
+            +998 (99) 172 17 62
+          </div>
+        </RouterLink>
       </div>
 
       <div className="lg:hidden">
