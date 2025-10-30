@@ -53,7 +53,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center justify-start gap-3">
                 <strong className="text-xl">Телефон:</strong>{" "}
-                <p className="text-lg">+998 (99) 172 17 62</p>
+                <p className="text-lg">+998 (91) 354 11 11</p>
               </div>
               {/* <div className="flex items-center justify-start gap-3">
                 <strong className="text-xl">E-mail:</strong>
@@ -65,7 +65,9 @@ const Footer = () => {
               <InstagramOutlined className="hover:text-pink-600 cursor-pointer transition-all" />
               <SendOutlined className="hover:text-blue-400 cursor-pointer transition-all" />
             </div>
-            <p className="text-xl text-gray-300">2024 © Toshiba & Hitachi"</p>
+            <p className="text-xl text-gray-300">
+              {new Date().getFullYear()} © Toshiba & Hitachi"
+            </p>
           </div>
         </Col>
       </Row>

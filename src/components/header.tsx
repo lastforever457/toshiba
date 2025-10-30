@@ -3,6 +3,7 @@ import { useState } from "react";
 import { FiMenu, FiPhoneCall } from "react-icons/fi";
 import { Link as RouterLink } from "react-router-dom";
 import { Link } from "react-scroll";
+import logo from "../../public/logo.png";
 import useCompanyMenus from "../hooks/use-company-menus";
 import i18n from "../i18n/i18n";
 
@@ -31,7 +32,7 @@ const Header = () => {
         duration={800}
         className="text-2xl font-bold cursor-pointer"
       >
-        Toshiba & Hitachi
+        <img src={logo} alt="Logo" width={200} />
       </Link>
       <div className="hidden lg:flex justify-center items-center gap-5">
         {menus.map((menu: Record<string, any>, index: number) => (
@@ -55,10 +56,10 @@ const Header = () => {
         >
           {buttonText}
         </Button>
-        <RouterLink to={"tel:+998991721762"}>
+        <RouterLink to={"tel:+998913541111"}>
           <div className="flex justify-center items-center text-xl gap-2">
             <FiPhoneCall />
-            +998 (99) 172 17 62
+            +998 (91) 354 11 11
           </div>
         </RouterLink>
       </div>
