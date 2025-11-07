@@ -67,7 +67,7 @@ const Header = () => {
       <div className="lg:hidden">
         <FiMenu className="text-3xl" onClick={showDrawer} />
         <Drawer
-          title="Toshiba & Hitachi"
+          title="KONL CANNY"
           placement={"top"}
           onClose={onClose}
           open={open}

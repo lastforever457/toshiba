@@ -66,7 +66,7 @@ const Footer = () => {
               <SendOutlined className="hover:text-blue-400 cursor-pointer transition-all" />
             </div>
             <p className="text-xl text-gray-300">
-              {new Date().getFullYear()} © Toshiba & Hitachi"
+              {new Date().getFullYear()} © KONL CANNY"
             </p>
           </div>
         </Col>
