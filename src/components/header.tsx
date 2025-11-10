@@ -96,7 +96,7 @@ const Header = () => {
             </Space>
             <div className="flex justify-center items-center text-xl gap-2">
               <FiPhoneCall />
-              +998 (99) 172 17 62
+              +998 (91) 354 11 11
             </div>
           </div>
         </Drawer>
