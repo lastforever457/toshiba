@@ -8,6 +8,9 @@
 - [ ] Mijozlar bog'lanishi uchun `Contacts` yoki `Footer` bo'limini mukammallashtirish (xaritada manzilni ko'rsatish va h.k).
 
 ## Bajarilgan vazifalar
+- [x] LCP va FCP ni "yashil" zonaga ko'tarish uchun barcha rasmlarni `.webp` ga konvertatsiya qilish, qahramon(hero) rasmni to'g'ri (preload, eager) yuklash.
+- [x] Sahifani tezroq yuklash uchun `App.tsx` ichidagi pastki sahifa bo'limlariga dinamik `React.lazy` ni qo'llash (Code Splitting).
+- [x] Kod sifatini oshirish uchun TypeScript Strict Mode muammolari, `any` tiplari va ko'zi ojizlar uchun maxsus A11y aria-label teglari to'g'rilandi.
 - [x] Butun loyiha bo'ylab SEO optimizatsiyasini o'rnatish (`index.html` ga Open Graph, Schema.org va meta teglar qo'shish, `robots.txt` va `sitemap.xml` yaratish).
 - [x] Sahifa tillari o'zgarishini qamrab oluvchi `react-helmet-async` kutubxonasini o'rnatish va `App.tsx` ga ulash.
 - [x] Loyiha hujjatlarini (`PROJECT_CONTEXT.md`, `TASKS.md`, `CHANGELOG.md`) yaratish va saqlash.

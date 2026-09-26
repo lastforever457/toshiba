@@ -1,9 +1,15 @@
 import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
+export interface MenuItem {
+  id: number;
+  title: string;
+  path: string;
+}
+
 const useCompanyMenus = () => {
   const { t } = useTranslation();
-  const menus = useMemo(
+  const menus: MenuItem[] = useMemo(
     () => [
       {
         id: 1,
