@@ -8,6 +8,8 @@
 - [ ] Mijozlar bog'lanishi uchun `Contacts` yoki `Footer` bo'limini mukammallashtirish (xaritada manzilni ko'rsatish va h.k).
 
 ## Bajarilgan vazifalar
+- [x] Butun loyiha bo'ylab SEO optimizatsiyasini o'rnatish (`index.html` ga Open Graph, Schema.org va meta teglar qo'shish, `robots.txt` va `sitemap.xml` yaratish).
+- [x] Sahifa tillari o'zgarishini qamrab oluvchi `react-helmet-async` kutubxonasini o'rnatish va `App.tsx` ga ulash.
 - [x] Loyiha hujjatlarini (`PROJECT_CONTEXT.md`, `TASKS.md`, `CHANGELOG.md`) yaratish va saqlash.
 - [x] Loyihaning asosiy muhitini (React + Vite + TypeScript) sozlash.
 - [x] Tailwind CSS, Ant Design va boshqa kerakli kutubxonalarni o'rnatish.
