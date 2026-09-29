@@ -27,7 +27,11 @@ const HeroImage = ({
         className="relative flex justify-center rounded-3xl items-center w-[80%] md:w-[700px] h-[300px] bg-black/10"
         style={{ backdropFilter: "blur(15px)" }}
       >
-        <h2 className="text-center font-bold px-4">{title}</h2>
+        {isFirst ? (
+          <h1 className="text-center font-bold px-4">{title}</h1>
+        ) : (
+          <h2 className="text-center font-bold px-4">{title}</h2>
+        )}
       </div>
     </div>
   );

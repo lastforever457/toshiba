@@ -4,6 +4,9 @@ Loyihadagi barcha muhim o'zgarishlar ushbu faylda yozib boriladi.
 
 ## [Unreleased]
 ### Added
+- Tarjimalar asinxron (fetch) tizimidan statik import tizimiga o'tkazildi. Bu Googlebot uchun indeksatsiyani kafolatlaydi.
+- Sahifada asosiy mavzuni beruvchi `<H1>` tegi qo'shildi.
+- Dinamik SEO `<title>` va `<meta name="description">` komponentlari qo'shildi.
 - Barcha og'ir png rasmlar webp formatiga konvertatsiya qilinib, preload yordamida LCP yaxshilandi.
 - `Main.tsx` refaktor qilinib, background-image o'rniga standard `<img>` fetchPriority="high" va loading="eager" ulandi.
 - `React.lazy` orqali `App.tsx` ga Code Splitting o'rnatildi, JS Bundle hajmi va TBT tezligi qisqartirildi.
