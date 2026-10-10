@@ -30,7 +30,7 @@ const About = () => {
           <Col key={index} xs={24} sm={12} md={8} lg={8} xl={8}>
             <div
               className="flex flex-col h-full justify-center gap-2 items-center px-5 py-10 text-white cursor-pointer bg-center bg-cover bg-no-repeat rounded-xl object-cover"
-              style={{ backgroundImage: `url("/card-bg.png")` }}
+              style={{ backgroundImage: `url("/card-bg.webp")` }}
             >
               <h2 className="text-2xl font-bold">{item.label}</h2>
               <p className="text-center text-lg">{item.content}</p>
