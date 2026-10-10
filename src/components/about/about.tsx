@@ -23,7 +23,7 @@ const About = () => {
   );
   return (
     <div className="px-5 md:px-10 xl:px-72 py-16" id="about">
-      <h1 className="text-center text-3xl mb-5 uppercase">{t("about")}</h1>
+      <h2 className="text-center text-3xl mb-5 uppercase">{t("about")}</h2>
       <p className="text-center text-lg mb-10">{t("about slogan")}</p>
       <Row gutter={[16, 16]}>
         {items.map((item, index) => (
@@ -32,7 +32,7 @@ const About = () => {
               className="flex flex-col h-full justify-center gap-2 items-center px-5 py-10 text-white cursor-pointer bg-center bg-cover bg-no-repeat rounded-xl object-cover"
               style={{ backgroundImage: `url("/card-bg.webp")` }}
             >
-              <h2 className="text-2xl font-bold">{item.label}</h2>
+              <h3 className="text-2xl font-bold">{item.label}</h3>
               <p className="text-center text-lg">{item.content}</p>
             </div>
           </Col>

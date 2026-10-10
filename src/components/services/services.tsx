@@ -19,9 +19,9 @@ const Services = () => {
   );
   return (
     <div id="services" className="px-5 md:px-10 xl:px-72 py-16">
-      <h1 className="text-black text-center text-3xl mb-5 uppercase">
+      <h2 className="text-black text-center text-3xl mb-5 uppercase">
         {t("services")}
-      </h1>
+      </h2>
       <Row gutter={[25, 25]}>
         {imageNames.map((imageName, index) => (
           <Col
@@ -36,7 +36,7 @@ const Services = () => {
               cover={
                 <img
                   src={`/elevators/${imageName.src}`}
-                  alt={`Image ${index + 1}`}
+                  alt={imageName.name}
                   className="w-full h-[250px] object-cover"
                 />
               }

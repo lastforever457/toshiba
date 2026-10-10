@@ -83,9 +83,9 @@ const Works = () => {
 
   return (
     <div id="works" className="bg-[#6C757D] px-5 md:px-10 xl:px-72 py-16">
-      <h1 className="text-white text-center text-3xl mb-5 uppercase">
+      <h2 className="text-white text-center text-3xl mb-5 uppercase">
         {t("works")}
-      </h1>
+      </h2>
       <Row gutter={[25, 25]}>
         {visibleImages.map((imageName, index) => (
           <Col
@@ -98,7 +98,7 @@ const Works = () => {
           >
             <img
               src={`/elevators/${imageName}`}
-              alt={`Image ${index + 1}`}
+              alt={`KONL CANNY liftlari va eskalatorlari loyihasi ${index + 1}`}
               className="w-full h-[250px] object-cover"
             />
           </Col>
